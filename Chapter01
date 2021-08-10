@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+
+void main()
+{
+    int basicsalary;
+
+    printf("Enter your basic salary:");
+    scanf("%d",&basicsalary);
+
+    int  DA = basicsalary*0.4;
+    int RA = basicsalary*0.2;
+    int GS = (DA+RA)*12;
+    printf("Dearness Alowance:%d\n",DA);
+    printf("Rent allowance:%d\n",RA);
+    printf("Gross Salary/Year:%d\n",GS);
+
+}
