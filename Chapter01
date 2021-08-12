@@ -1,11 +1,11 @@
-/* This is 1) (a) Ramesh’s basic salary is input through the keyboard. His dearness 
-allowance is 40% of basic salary, and house rent allowance is 20% of 
-basic salary. Write a program to calculate his gross salary.*/
-
-
 #include <stdio.h>
 #include <conio.h>
 #include <math.h>
+
+/* This is 1) (a) Ramesh’s basic salary is input through the keyboard. His dearness 
+allowance is 40% of basic salary, and house rent allowance is 20% of 
+basic salary. Write a program to calculate his gross salary.
+
 void main()
 {
     int basicsalary;
@@ -20,4 +20,132 @@ void main()
     printf("Rent allowance:%d\n",RA);
     printf("Gross Salary/Year:%d\n",GS);
 
+}*/
+
+/* This is 1)(b) The distance between two cities (in km.) is input through the 
+keyboard. Write a program to convert and print this distance in 
+meters, feet, inches and centimeters.
+
+int convert( int a)
+{
+    float meters,feet,inches,centimeters;
+    meters =a*1000;
+    printf("meters:%f\n",meters);
+    feet = a*3280.84;
+    printf("feet:%f\n",feet);
+    inches =a*39370.079;
+    printf("inches:%f\n",inches);
+    centimeters=a*100000;
+    printf("centimeters:%f\n\n",centimeters);
 }
+void main()
+{
+    int D1,D2;
+    printf("Enter The distances :");
+    scanf("%d%d",&D1,&D2);
+    convert(D1);
+    convert(D2);
+}*/
+
+/* This is 1)(c) If the marks obtained by a student in five different subjects are 
+input through the keyboard, write a program to find out the 
+aggregate marks and percentage marks obtained by the student. 
+Assume that the maximum marks that can be obtained by a student 
+in each subject is 100.
+
+int main()
+{
+    int a[5],sum=0;
+    printf("Enter the marks of students");
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(int j=0;j<5;j++)
+    {
+        sum=sum+a[j];
+    }
+    int percentage = sum/5;
+    printf("Aggregate Marks:%d\n",sum);
+    printf("Percentage Gained :%d\n",percentage);
+}*/
+
+/* This is 1)(d) Temperature of a city in Fahrenheit degrees is input through the 
+keyboard. Write a program to convert this temperature into 
+Centigrade degrees.
+
+
+int main()
+{
+    float Fh,Cg;
+
+    scanf("%f",&Fh);
+
+    Cg = (Fh-32)*100/180;
+    printf("%f",Cg);
+}*/
+
+/* This is 1)(e) The length and breadth of a rectangle and radius of a circle are 
+input through the keyboard. Write a program to calculate the area 
+and perimeter of the rectangle, and the area and circumference of 
+the circle.
+
+int main()
+{
+    float Length,Breadth,Radius;
+
+    printf("Enter the length");
+    scanf("%f",&Length);
+    printf("Enter the Breadth");
+    scanf("%f",&Breadth);
+    printf("Enter the radius");
+    scanf("%f",&Radius);
+
+    float Areaof_Rectangle = Length*Breadth;
+    printf("Area of Rectangle:%d\n",Areaof_Rectangle);
+    float Perimeter = 2*(Length+Breadth);
+    printf("Perimeter of Rectangle:%d\n",Perimeter);
+    float Areaofc = (22/7)*(Radius*Radius);
+    printf("Area of Circle:%0.1f\n",Areaofc);
+    float Circumfrence = 2*(22/7)*Radius;
+    printf("Circumfrence:%0.1f;\n",Circumfrence);
+
+}*/
+
+/*This is 1)(f) Paper of size A0 has dimensions 1189 mm x 841 mm. Each 
+subsequent size A(n) is defined as A(n-1) cut in half parallel to its 
+shorter sides. Thus paper of size A1 would have dimensions 841 
+mm x 594 mm. Write a program to calculate and print paper sizes 
+A0, A1, A2, … A8.
+
+/*int main()
+{
+    int a,b,c,d,e,f,g,h,i,j,k;
+    int a0,a1,a2,a3,a4,a5,a6,a7,a8;
+    a=1189;
+    b=841;
+    c=a/2;
+    d=b/2;
+    e=c/2;
+    f=d/2;
+    g=e/2;
+    h=f/2;
+    i=g/2;
+    j=h/2;
+    k=i/2;
+
+
+
+    a0=a*b;
+    a1=b*c;
+    a2=c*d;
+    a3=d*e;
+    a4=e*f;
+    a5=f*g;
+    a6=g*h;
+    a7=h*i;
+    a8=i*k;
+
+    printf("a0:%dmm\na1:%dmm\na2:%dmm\na3:%dmm\na4:%dmm\na5:%dmm\na6:%dmm\na7:%dmm\na8:%dmm\n");
+
+}*/
