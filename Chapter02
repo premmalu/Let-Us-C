@@ -1,0 +1,238 @@
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+
+/*This is 2)(a) If a five-digit number is input through the keyboard, write a 
+program to calculate the sum of its digits. (Hint: Use the modulus 
+operator ‘%’)
+int main()
+{
+    int num,a,b,c,d,e,sum=0;
+
+    printf("Enter the number: ");
+    scanf("%d",&num);
+
+    a=num%10;
+    sum=sum+a;
+    num=num/10;
+    b=num%10;
+    sum=sum+b;
+    num=num/10;
+    c=num%10;
+    sum=sum+c;
+    num=num/10;
+    d=num%10;
+    sum=sum+d;
+    num=num/10;
+    e=num%10;
+    sum=sum+e;
+
+    printf("%d",sum);
+
+}*/
+
+/* This is 2)(b) If a five-digit number is input through the keyboard, write a 
+program to reverse the number.
+
+
+int main()
+{
+    int num,a,b,c,d,e,rev=0;
+
+    printf("Enter the number: ");
+    scanf("%d",&num);
+
+    a=num%10;
+    rev=rev+(a*10000);
+
+    num=num/10;
+    b=num%10;
+    rev=rev+(b*1000);
+
+
+    num=num/10;
+    c=num%10;
+    rev=rev+(c*100);
+
+    num=num/10;
+    d=num%10;
+    rev=rev+(d*10);
+
+    num=num/10;
+    e=num%10;
+    rev=rev+(e*1);
+
+
+    printf("%d",rev);
+}*/
+
+/*This is 2(c) If lengths of three sides of a triangle are input through the 
+keyboard, write a program to find the area of the triangle.
+
+int main()
+{
+    int a,b,c,p;
+    float area;
+    printf("Enter the length1: ");
+    scanf("%d",&a);
+    printf("Enter the length2: ");
+    scanf("%d",&b);
+    printf("Enter the length2: ");
+    scanf("%d",&c);
+
+    p=(a+b+c)/2;
+
+    area=sqrt(p*(p-a)*(p-b)*(p-c));
+
+    printf("%f",area);
+}*/
+
+/*This is 2)(d) Write a program to receive Cartesian co-ordinates (x, y) of a point 
+and convert them into polar co-ordinates (r, ).
+Hint: r = sqrt ( x2+ y2) and tan-1( y / x )
+
+
+int main()
+{
+    float x,y;
+    float r,a;
+    printf("Enter the value x : ");
+    scanf("%f",&x);
+    printf("Enter the value y: ");
+    scanf("%f",&y);
+    a = atan(y/x);
+    a = a * (180.0 / 3.141592);
+    r     = sqrt(x*x + y*y);
+
+    printf("Polar Co-ordinates: (r, theta) = (%f, %f)\n", r, a);
+}
+*/
+
+/*This is 2)(e) Write a program to receive values of latitude (L1, L2) and longitude
+(G1, G2), in degrees, of two places on the earth and output the 
+distance (D) between them in nautical miles. The formula for 
+distance in nautical miles is:
+D = 3963 cos-1
+( sin L1 sin L2 + cos L1 cos L2 * cos ( G2 – G1 ) )
+
+int main()
+{
+    float L1, L2, G1, G2, D;
+    const float PI = 3.141592;
+
+    printf("Enter latitude(L1, L2)\n");
+    scanf("%f%f", &L1, &L2);
+
+    printf("Enter longitude(G1, G2)\n");
+    scanf("%f%f", &G1, &G2);
+
+    D = 3963 * acos( sin(L1) * sin(L2) + cos(L1) * cos(L2) * cos(G2 - G1) );
+
+    printf("Distance in nautical miles is %f\n", D);
+
+    return 0;
+}
+*/
+
+
+/*This is 2)(f) Wind chill factor is the felt air temperature on exposed skin due to 
+wind. The wind chill temperature is always lower than the air 
+temperature, and is calculated as per the following formula:
+wcf = 35.74 + 0.6215t + ( 0.4275t - 35.75 ) * v
+0.16
+where t is the temperature and v is the wind velocity. Write a 
+program to receive values of t and v and calculate wind chill factor
+(wcf).
+
+
+int main()
+{
+    float temp, wind, wcf;
+
+    printf("Enter air temperature in Fahrenheit: ");
+    scanf("%f", &temp);
+
+    printf("Enter the wind speed in mph: ");
+    scanf("%f", &wind);
+
+    wcf = 35.74 + 0.6215*temp + (0.4275*temp - 35.75) * pow(wind,0.16);
+
+    printf("Wind Chill Factor in Fahrenheit: %.2f",wcf);
+
+    return 0;
+}*/
+
+/*This is 2)(g) If value of an angle is input through the keyboard, write a program 
+to print all its Trigonometric ratios.
+
+int main()
+{
+    float degree, radian;
+    float PI = 3.14159;
+
+    printf("Enter angle in degree\n");
+    scanf("%f",&degree);
+
+    radian = degree * (PI / 180.0);
+
+    printf("Sin(%f) = %f\n", degree, sin(radian));
+    printf("Cos(%f) = %f\n", degree, cos(radian));
+    printf("Tan(%f) = %f\n", degree, tan(radian));
+    printf("Cosec(%f) = %f\n", degree, 1/sin(radian));
+    printf("Sec(%f) = %f\n", degree, 1/cos(radian));
+    printf("Cot(%f) = %f\n", degree, 1/tan(radian));
+
+    return 0;
+}*/
+
+/*This is 2)(h) Two numbers are input through the keyboard into two locations C 
+and D. Write a program to interchange the contents of C and D
+
+int main()
+{
+    int C, D, T;
+     printf("Enter the value of C: ");
+     scanf("%d", &C);
+
+     printf("Enter the value of D: ");
+     scanf("%d", &D);
+
+     C = C+D; //c=30, d=20
+     D = C-D; //d=10, c=30
+     C = C-D; //c=20
+
+
+     printf("\n The value of C: %d", C);
+     printf("\n The value of D: %d", D);
+     getch();
+}*/
+
+/*This is 2)(i) Consider a currency system in which there are notes of seven 
+denominations, namely, Re. 1, Rs. 2, Rs. 5, Rs. 10, Rs. 50, Rs. 100. If 
+a sum of Rs. N is entered through the keyboard, write a program to 
+compute the smallest number of notes that will combine to give Rs. 
+N.
+
+
+int main()
+{
+    int a,b,c;
+    printf("enter amount \n");
+    scanf("%d",&a);
+    b=a/100;
+    c=a%100;
+    b=b+c/50;
+    c=c%50;
+    b=b+c/10;
+    c=c%10;
+    b=b+c/5;
+    c=c%5;
+    b=b+c/2;
+    c=c%2;
+    b=b+c/1;
+
+    printf("\n number of notes is: %d",b);
+
+    return 0;
+    getch();
+}*/
