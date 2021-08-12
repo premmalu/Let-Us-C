@@ -4,7 +4,7 @@
 
 //Chapter-4[D]
 
-/*4)[D](a) Any year is entered through the keyboard, write a program to
+/*This is 4)[D](a) Any year is entered through the keyboard, write a program to
 determine whether the year is leap or not. Use the logical operators
 && and ||.
 
@@ -33,7 +33,7 @@ int main()
     }
 }*/
 
-/*4)[D](b) Any character is entered through the keyboard, write a program to
+/*This is 4)[D](b) Any character is entered through the keyboard, write a program to
 determine whether the character entered is a capital letter, a small
 case letter, a digit or a special symbol.
 The following table shows the range of ASCII values for various
@@ -74,7 +74,7 @@ int main()
 
 
 
-/*4)[D](c) A certain grade of steel is graded according to the following
+/*This is 4)[D](c) A certain grade of steel is graded according to the following
 conditions:
 (i) Hardness must be greater than 50
 (ii) Carbon content must be less than 0.7
@@ -125,7 +125,7 @@ int main()
 
 
 
-/*4)[D](d) If the three sides of a triangle are entered through the keyboard,
+/*This is 4)[D](d) If the three sides of a triangle are entered through the keyboard,
 write a program to check whether the triangle is valid or not. The
 triangle is valid if the sum of two sides is greater than the largest of
 the three sides.
