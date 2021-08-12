@@ -10,40 +10,27 @@ determine whether the year is leap or not. Use the logical operators
 
 int main()
 {
-    int a,b,c,g,s1,s2,sum;
+    int a;
 
-    printf("enter the input a:,b:,c:");
-    scanf("%d %d %d",&a,&b,&c);
+    printf("Enter the year");
+    scanf("%d",&a);
 
-    if (a>b&&a>c)
+    if(a%4==0)
     {
-        g=a;
-        s1=b;
-        s2=c;
+    printf("%d is a leap year",a);
     }
-    else if(b>a&&b>c)
+    else if(a%400==0)
     {
-        g=b;
-        s1=a;
-        s2=c;
+        printf("%d is a leap year",a);
     }
-    else if(c>a&&c>b)
+    else if(a%100==0)
     {
-        g=c;
-        s1=a;
-        s2=b;
+        printf("%d is not a leap year",a);
     }
-    sum=s1+s2;
-    if (g<=sum)
+    else
     {
-        printf("The triangle is valid");
+        printf("%d is not a leap year",a);
     }
-    else if(g>=sum)
-    {
-        printf("The triangle is Not Valid");
-    }
-
-
 }*/
 
 /*This is 4)[D](b) Any character is entered through the keyboard, write a program to
@@ -145,32 +132,38 @@ the three sides.
 
 int main()
 {
-    int a,b,c,g,l1,l2;
+    int a,b,c,g,s1,s2,sum;
 
-    printf("enter the input a:\n,b:\n,c:");
-    scanf("%d %d %d");
+    printf("enter the input a:,b:,c:");
+    scanf("%d %d %d",&a,&b,&c);
 
     if (a>b&&a>c)
     {
         g=a;
-        l1=b;
-        l2=c;
+        s1=b;
+        s2=c;
     }
     else if(b>a&&b>c)
     {
         g=b;
-        l1=a;
-        l2=c;
+        s1=a;
+        s2=c;
     }
-    else
+    else if(c>a&&c>b)
     {
         g=c;
-        l1=a;
-        l2=c;
+        s1=a;
+        s2=b;
+    }
+    sum=s1+s2;
+    if (g<=sum)
+    {
+        printf("The triangle is valid");
+    }
+    else if(g>=sum)
+    {
+        printf("The triangle is Not Valid");
     }
 
-    int val=g-(l1+l2);
 
-    switch :
-        case 0:
 }*/
