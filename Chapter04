@@ -10,27 +10,40 @@ determine whether the year is leap or not. Use the logical operators
 
 int main()
 {
-    int a;
+    int a,b,c,g,s1,s2,sum;
 
-    printf("Enter the year");
-    scanf("%d",&a);
+    printf("enter the input a:,b:,c:");
+    scanf("%d %d %d",&a,&b,&c);
 
-    if(a%4==0)
+    if (a>b&&a>c)
     {
-    printf("%d is a leap year",a);
+        g=a;
+        s1=b;
+        s2=c;
     }
-    else if(a%400==0)
+    else if(b>a&&b>c)
     {
-        printf("%d is a leap year",a);
+        g=b;
+        s1=a;
+        s2=c;
     }
-    else if(a%100==0)
+    else if(c>a&&c>b)
     {
-        printf("%d is not a leap year",a);
+        g=c;
+        s1=a;
+        s2=b;
     }
-    else
+    sum=s1+s2;
+    if (g<=sum)
     {
-        printf("%d is not a leap year",a);
+        printf("The triangle is valid");
     }
+    else if(g>=sum)
+    {
+        printf("The triangle is Not Valid");
+    }
+
+
 }*/
 
 /*This is 4)[D](b) Any character is entered through the keyboard, write a program to
