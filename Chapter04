@@ -167,3 +167,412 @@ int main()
 
 
 }*/
+
+
+/*This is 4)[D](e) If the three sides of a triangle are entered through the keyboard,
+write a program to check whether the triangle is isosceles,
+equilateral, scalene or right angled triangle.
+int main()
+{
+    int a,b,c;
+
+    printf("Enter the Lengths of triangles:");
+    scanf("%d%d%d",&a,&b,&c);
+
+    if(a==b&&b==c&&c==a)
+    {
+        printf("This is Equilateral Triangle");
+    }
+    else if(a==b||b==c||c==a)
+    {
+        printf("This is isosceles Triangle");
+    }
+    else if((a*a)+(b*b)==(c*c))
+    {
+        printf("This is right angled Triangle");
+    }
+    else
+    {
+        printf("This is Scalen trianglr");
+    }
+}*/
+
+/*This is 4)[D](f) In boxing the weight class of a boxer is decided as per the following
+table. Write a program that receives weight as input and prints out
+the boxer’s weight class.
+table.
+
+Boxer Class                     Weight in Pounds
+Flyweight                       < 115
+Bantamweight                    115 - 121
+Featherweight                   122 - 153
+Middleweight                    154 – 189
+Heavyweight                     >= 190
+
+
+
+int main()
+{
+    int weight;
+
+    printf("Enter the Weight of the boxer:");
+    scanf("%d",&weight);
+
+    if(weight < 115)
+    {
+        printf("Flyweight");
+    }
+    else if(weight >115 && weight<121)
+    {
+        printf("Bantamweight");
+    }
+    else if(weight >122 && weight <153)
+    {
+        printf("Featherweight");
+    }
+    else if(weight >154 && weight <189)
+    {
+        printf("Middleweight");
+    }
+    else if(weight >=190)
+    {
+        printf("Heavyweight");
+    }
+    else
+    {
+        printf("Please enter the valid Weight");
+        scanf("%d",&weight);
+    }
+}*/
+
+/*This is 4)
+[D](g) In digital world colors are specified in Red-Green-Blue (RGB) format,
+with values of R, G, B varying on an integer scale from 0 to 255. In
+print publishing the colors are mentioned in Cyan-Magenta-YellowBlack (CMYK) format, with values of C, M, Y, and K varying on a real
+scale from 0.0 to 1.0. Write a program that converts RGB color to
+CMYK color as per the following formula:
+White =Max(Red / 255,Green / 255,Blue / 255)
+
+Cyan=((White-Red / 255)/white)
+Magenta=((White - green/225)/white)
+Yellow = ((White-Blue/225)/White)
+Black = 1-White
+
+int main()
+{
+    float red,green,blue;
+    float white,cyan,magenta,yellow,black;
+    float max;
+
+    printf("Enter the values of red,green and blue:");
+    scanf("%f%f%f",&red,&green,&blue);
+
+    if(red==0,green==0,blue==0)
+    {
+        white=magenta=yellow=0;
+        black=1;
+        black=1;
+    }
+     else
+    {
+        red    = red   / 255;
+        green  = green / 255;
+        blue   = blue  / 255;
+
+        max    = red;
+        if(green > max)
+        {
+            max = green;
+        }
+
+        if(blue > max)
+        {
+            max = blue;
+        }
+
+        white   = max;
+
+        cyan    = (white - red)  / white;
+        magenta = (white - green)/ white;
+        yellow  = (white - blue) / white;
+
+        black   = 1 - white;
+
+    }
+
+    printf("CMYK = (%f, %f, %f, %f)\n",
+            cyan, magenta, yellow, black);
+
+    return 0;
+}
+*/
+
+/*Write a program that receives month and date of birth as input and
+prints the corresponding Zodiac sign based on the following table:
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int day, month;
+
+    printf("Enter the day of birth(1 to 31): ");
+    scanf("%d", &day);
+
+    printf("Enter the month of birth(1 to 12): ");
+    scanf("%d", &month);
+
+    // for Capricorn
+    if(month == 12 && day>=22 && day<=31 || month == 1 && day<=19 && day>0)
+        printf("Your Zodiac Sign is Capricorn.");
+
+    // for Aquarius
+    else if(month == 1 && day>=20 && day<=31 || month == 2 && day<=17 && day>0)
+        printf("Your Zodiac Sign is Aquarius.");
+
+    // for Pisces
+    else if(month == 2 && day>=18 && day<=29 || month == 3 && day<=19 && day>0)
+        printf("Your Zodiac Sign is Pisces.");
+
+    // for Aries
+    else if(month == 3 && day>=20 && day<=31 || month ==4  && day<=19 && day>0)
+        printf("Your Zodiac Sign is Aries.");
+
+    // for Taurus
+    else if(month == 4 && day>=20 && day<=30 || month == 5 && day<=20 && day>0)
+        printf("Your Zodiac Sign is Taurus.");
+
+    // for Gemini
+    else if(month == 5 && day>=21 && day<=31 || month == 6 && day<=20 && day>0)
+        printf("Your Zodiac Sign is Gemini.");
+
+    //For Cancer
+    else if(month == 6 && day>=21 && day<=30 || month == 7 && day<=22 && day>0)
+        printf("Your Zodiac Sign is Cancer.");
+
+    // for Leo
+    else if(month == 7 && day>=23 && day<=31 || month == 8 && day<=22 && day>0)
+        printf("Your Zodiac Sign is Leo.");
+
+    // for Virgo
+    else if(month == 8 && day>=23 && day<=31 || month == 9 && day<=22 && day>0)
+        printf("Your Zodiac Sign is Virgo.");
+
+    // for Libra
+    else if(month == 9 && day>=23 && day<=30 || month == 10 && day<=22 && day>0)
+        printf("Your Zodiac Sign is Libra.");
+
+    // for Scorpio
+    else if(month == 10 && day>=23 && day<=31 || month == 11 && day<=21 && day>0)
+        printf("Your Zodiac Sign is Scorpio.");
+
+    // for Sagittarius
+    else if(month == 11 && day>=22 && day<=30 || month == 12 && day<=21 && day>0)
+        printf("Your Zodiac Sign is Sagittarius.");
+}
+*/
+
+/*The Body Mass Index (BMI) is defined as ratio of the weight of a
+person (in kilograms) to the square of the height (in meters). Write
+a program that receives weight and height, calculates the BMI, and
+reports the BMI category as per the following table:
+
+
+int main()
+{
+    float height, weight, bmi;
+
+    printf("Enter height in meter\n");
+    scanf("%f", &height);
+
+    printf("Enter weight in kg\n");
+    scanf("%f", &weight);
+
+    bmi = weight / (height * height);
+
+    printf("Your Body Mass Index(BMI) is %f\n", bmi);
+
+    if(bmi < 15)
+    {
+        printf("Your BMI category is: Starvation\n");
+    }
+    else if(bmi >= 15.1 && bmi <= 17.5)
+    {
+        printf("Your BMI category is: Anorexic\n");
+    }
+    else if(bmi >= 17.6 && bmi <= 18.5)
+    {
+        printf("Your BMI category is: Underweight\n");
+    }
+    else if(bmi >= 18.6 && bmi <= 24.9)
+    {
+        printf("Your BMI category is: Ideal\n");
+    }
+    else if(bmi >= 25 && bmi <= 25.9)
+    {
+        printf("Your BMI category is: Overweight\n");
+    }
+    else if(bmi >= 30 && bmi <= 30.9)
+    {
+        printf("Your BMI category is: Obese\n");
+    }
+    else if(bmi >= 40)
+    {
+        printf("Your BMI category is: Morbidly Obese\n");
+    }
+    else
+    {
+        printf("Wrong entry\n");
+    }
+
+    return 0;
+}*/
+
+/*This is 4)[E](a) Using conditional operators determine:
+(1) Whether the character entered through the keyboard is a
+lower case alphabet or not.
+(2) Whether a character entered through the keyboard is a special
+symbol or not
+
+int main()
+{
+    char a;
+
+    printf("Enter the Character :");
+    scanf("%c",&a);
+
+    if (a>=65&&a<=90)
+    {
+        printf("%c is a capital letter",a);
+    }
+    else if(a>=97&&a<=122)
+    {
+        printf("%c is a Small letter",a);
+    }
+    else if(a>=48&&a<=57)
+    {
+        printf("%c is a Number",a);
+    }
+    else
+    {
+            printf("%c is a specal symbol",a);
+    }
+}*/
+
+/*This is 4)[E](b) Write a program using conditional operators to determine whether
+a year entered through the keyboard is a leap year or not.
+
+int main()
+{
+    int a;
+
+    printf("Enter the year");
+    scanf("%d",&a);
+
+    if(a%4==0)
+    {
+    printf("%d is a leap year",a);
+    }
+    else if(a%400==0)
+    {
+        printf("%d is a leap year",a);
+    }
+    else if(a%100==0)
+    {
+        printf("%d is not a leap year",a);
+    }
+    else
+    {
+        printf("%d is not a leap year",a);
+    }
+}*/
+
+/*This is 4)[E](c) Write a program to find the greatest of the three numbers entered
+through the keyboard. Use conditional operators.
+int main(){
+  int a,b,c;
+  int big;
+
+  printf("Enter any there numbers: ");
+  scanf("%d%d%d",&a,&b,&c);
+
+
+  if(a>b && a>c)
+    big = a;
+   else if(b>c)
+    big = b;
+   else
+    big = c;
+
+   printf("Largest number is: %d",big);
+
+
+  return 0;
+}*/
+
+/*This is 4)[E](d) Write a program to receive value of an angle in degrees and check
+whether sum of squares of sine and cosine of this angle is equal to
+1.
+
+int main()
+{
+    float angle;
+    float sum,sn,csn;
+
+    printf("Enter the Angle in degrees:");
+    scanf("%f",&angle);
+
+    sn=sin(angle);
+    csn=cos(angle);
+    sum=((sn*sn)+(csn*csn));
+
+    if(sum==1)
+    {
+        printf("True");
+    }
+    else
+    {
+        printf("False");
+    }
+}*/
+
+/*This is 4)[E]
+
+Rewrite the following program using conditional operators.
+# include <stdio.h>
+int main( )
+{
+float sal ;
+printf ( "Enter the salary" ) ;
+scanf ( "%f", &sal ) ;
+if ( sal >= 25000 && sal <= 40000 )
+printf ( "Manager\n" ) ;
+else
+if ( sal >= 15000 && sal < 25000 )
+printf ( "Accountant\n" ) ;
+else
+printf ( "Clerk\n" ) ;
+return 0 ;
+*/
+/*
+int main( )
+{
+    float sal ;
+    printf ( "Enter the salary" ) ;
+    scanf ( "%f", &sal ) ;
+
+    if(sal >= 25000)
+    {
+        if(sal <= 40000)
+            printf ( "Manager\n" ) ;
+    }
+    else if( sal >= 15000)
+    {
+        if(sal < 25000)
+            printf ( "Accountant\n" ) ;
+        else
+            printf ( "Clerk\n" ) ;
+    }
+    return 0 ;
+
+}*/
