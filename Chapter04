@@ -1,0 +1,163 @@
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+
+//Chapter-4[D]
+
+/*4)[D](a) Any year is entered through the keyboard, write a program to
+determine whether the year is leap or not. Use the logical operators
+&& and ||.
+
+int main()
+{
+    int a;
+
+    printf("Enter the year");
+    scanf("%d",&a);
+
+    if(a%4==0)
+    {
+    printf("%d is a leap year",a);
+    }
+    else if(a%400==0)
+    {
+        printf("%d is a leap year",a);
+    }
+    else if(a%100==0)
+    {
+        printf("%d is not a leap year",a);
+    }
+    else
+    {
+        printf("%d is not a leap year",a);
+    }
+}*/
+
+/*4)[D](b) Any character is entered through the keyboard, write a program to
+determine whether the character entered is a capital letter, a small
+case letter, a digit or a special symbol.
+The following table shows the range of ASCII values for various
+characters:
+characters                  ASCII values
+A-Z                         65-90
+a-z                         97-122
+0-9                         48-57
+specal symbols              0-47,58-64,91-96,123-127
+
+
+
+
+int main()
+{
+    char a;
+
+    printf("Enter the Character :");
+    scanf("%c",&a);
+
+    if (a>=65&&a<=90)
+    {
+        printf("%c is a capital letter",a);
+    }
+    else if(a>=97&&a<=122)
+    {
+        printf("%c is a Small letter",a);
+    }
+    else if(a>=48&&a<=57)
+    {
+        printf("%c is a Number",a);
+    }
+    else
+    {
+            printf("%c is a specal symbol",a);
+    }
+}*/
+
+
+
+/*4)[D](c) A certain grade of steel is graded according to the following
+conditions:
+(i) Hardness must be greater than 50
+(ii) Carbon content must be less than 0.7
+(iii) Tensile strength must be greater than 5600
+The grades are as follows:
+Grade is 10 if all three conditions are met
+Grade is 9 if conditions (i) and (ii) are met
+Grade is 8 if conditions (ii) and (iii) are met
+Grade is 7 if conditions (i) and (iii) are met
+Grade is 6 if only one condition is met
+Grade is 5 if none of the conditions are met
+Write a program, which will require the user to give values of
+hardness, carbon content and tensile strength of the steel under
+consideration and output the grade of the steel.
+
+int main()
+{
+    float Hardness,Carbon,Tensile;
+
+    printf("Enter the Hardness , Carbon Content ,Tensile sterngth");
+    scanf("%f %f %f",&Hardness,&Carbon,&Tensile);
+
+    if (Hardness>50&&Carbon<0.7&&Tensile>5600)
+    {
+        printf("Grade:10");
+    }
+    else if(Hardness>50&&Carbon<0.7&&Tensile<5600)
+    {
+        printf("Grede:9");
+    }
+    else if(Hardness<50&&Carbon<0.7&&Tensile>5600)
+    {
+        printf("Grade :8");
+    }
+    else if(Hardness>50&&Carbon>0.7&&Tensile>5600)
+    {
+        printf("Grade :7");
+    }
+    else if (Hardness>50||Carbon<0.7||Tensile>5600)
+    {
+        printf("Grade:10");
+    }
+    else
+    {
+        printf("Grade:5");
+    }
+}*/
+
+
+
+/*4)[D](d) If the three sides of a triangle are entered through the keyboard,
+write a program to check whether the triangle is valid or not. The
+triangle is valid if the sum of two sides is greater than the largest of
+the three sides.
+
+int main()
+{
+    int a,b,c,g,l1,l2;
+
+    printf("enter the input a:\n,b:\n,c:");
+    scanf("%d %d %d");
+
+    if (a>b&&a>c)
+    {
+        g=a;
+        l1=b;
+        l2=c;
+    }
+    else if(b>a&&b>c)
+    {
+        g=b;
+        l1=a;
+        l2=c;
+    }
+    else
+    {
+        g=c;
+        l1=a;
+        l2=c;
+    }
+
+    int val=g-(l1+l2);
+
+    switch :
+        case 0:
+}*/
