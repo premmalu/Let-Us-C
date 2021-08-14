@@ -1,0 +1,156 @@
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+
+
+
+/*1. Factorial of a number
+2. Prime or not
+3. Odd or even
+4. Exit
+Once a menu item is selected the appropriate action should be
+taken and once this action is finished, the menu should reappear.
+Unless the user selects the ‘Exit’ option the program should
+continue to run.
+Hint: Make use of an infinite while and a switch statement.
+
+void main()
+{
+    int a,flag=1,factorial=1,num=0,n;
+    printf("Menu: n\1. Factorial of a number \n 2. Prime or not \n 3. Odd or even \n 4. Exit\n");
+    scanf("%d",&a);
+    switch (a)
+    {
+        case 1:
+            printf("Enter an integer:");
+            scanf("%d",&num);
+            printf("Function Factorial of a number is:");
+            n=num;
+            factorial=num;
+            while(num>1)
+            {
+                factorial*=(num-1);
+                num-=1;
+            }
+            printf("%d\n",factorial);
+            break;
+
+        case 2:
+            printf("Enter the number");
+            scanf("%d",&num);
+            n=num;
+            if(num==1)
+            {
+                printf("The number 1 is nor prime neither composite:");
+            }
+            for(int i=2;i<=n/2;i++)
+            {
+                if(n%i==0)
+                {
+                    flag=0;
+                    break;
+                }
+            }
+            //int i=2;
+            //while(i<=n/2)
+            //{
+            //    if(n%i==0)
+            //    {
+            //        flag=0;
+            //        break;
+            //    }
+            //    i++;
+            //}
+            if(flag==1)
+            {
+                printf("The number %d is Prime number: ",n);
+            }
+            else if(flag==0)
+                 printf("The number %d is Not a Prime number: ",n);
+            break;
+        case 3:
+            printf("Enter the number:");
+            scanf("%d",&num);
+            n=num;
+            if(num%2==0)
+            {
+                printf("The number %d is Even",n);
+            }
+            else if(num%2!=0)
+            {
+                printf("The number %d is Odd",n);
+            }
+            break;
+        case 4:
+            printf("Exit\n");
+            break;
+    }
+}*/
+
+/*[D] Write a program to find the grace marks for a student using switch.
+The user should enter the class obtained by the student and the
+number of subjects he has failed in. Use the following logic:
+ If the student gets first class and the number of subjects he
+failed in is greater than 3, then he does not get any grace.
+Otherwise the grace is of 5 marks per subject.
+ If the student gets second class and the number of subjects he
+failed in is greater than 2, then he does not get any grace.
+Otherwise the grace is of 4 marks per subject.
+ If the student gets third class and the number of subjects he
+failed in is greater than 1, then he does not get any grace.
+Otherwise the grace is of 5 marks.
+
+
+void main()
+{
+    int clas,sof,grace;
+    printf("Enter the class:");
+    scanf("%d",&clas);
+    printf("Enter the No of subjects failed:");
+    scanf("%d",&sof);
+
+    switch (clas)
+    {
+        case 1:
+            grace=5;
+            switch (sof)
+            {
+            case 1:
+            case 2:
+            case 3:
+                grace=grace*5;
+                printf("Your Grade Mark is :%d",grace);
+                break;
+            default:
+                printf("Does not get any grace mark");
+                break;
+            }
+         case 2:
+            grace=4;
+            switch (sof)
+            {
+            case 1:
+            case 2:
+            case 3:
+                grace=grace*5;
+                printf("Your Grade Mark is :%d",grace);
+                break;
+            default:
+                printf("Does not get any grace mark");
+                break;
+            }
+            break;
+         case 3:
+            grace=5;
+            switch (sof)
+            {
+            case 1:
+                grace=grace*5;
+                printf("Your Grade Mark is :%d",grace);
+                break;
+            default:
+                printf("Does not get any grace mark");
+                break;
+            }
+    }
+}
