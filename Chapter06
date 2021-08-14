@@ -1,0 +1,323 @@
+ /*This is 6)[c]
+(a) Write a program to print all prime numbers from 1 to 300. (Hint:
+Use nested loops, break and continue)
+int main()
+{
+    int num, count, i, prime;
+
+    printf("Prime Numbers from 1 To 300 are\n");
+
+    for(num = 1; num <= 300; num++)
+    {
+        if(num == 1)
+        {
+            printf("Number 1 is neither prime nor composite\n");
+            continue;
+        }
+
+        count = sqrt(num);
+        prime = 1;
+        for(i = 2; i <= count; i++)
+        {
+            if(num % i == 0)
+            {
+                prime = 0;
+                break;
+            }
+        }
+
+        if(prime)
+        {
+            printf("%d\n", num);
+        }
+        printf("count :%d\n",count);
+    }
+
+
+    return 0;
+}*/
+
+/*Write a program to fill the entire screen with a smiling face. The
+smiling face has an ASCII value 1
+
+int main()
+{
+    for(int i=0;i<5000;i++)
+    {
+        printf("%c",1);
+    }
+}*/
+
+/*(c) Write a program to add first seven terms of the following series
+using a for loop:
+
+int main()
+{
+    int i,j,n;
+    float fact = 1, sum = 0, div;
+    for(i=1;i<=7;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            fact=fact*j;
+        }
+        div=i/fact;
+        sum=sum+div;
+    }
+    printf("%f",sum);
+}*/
+
+/*(d) Write a program to generate all combinations of 1, 2 and 3 using for
+loop
+
+int main()
+{
+    int i,j,n;
+    for(i=1;i<=300;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            printf("%d X %d\t",i,j);
+        }
+        printf("\n");
+    }
+}*/
+
+/*(e) Write a program to print the multiplication table of the number
+entered by the user. The table should get displayed in the
+following form:
+
+int main()
+{
+    int i,j;
+    printf("Enter any number");
+    scanf("%d",&i);
+        for(j=1;j<=i;j++)
+        {
+            printf("%d * %d=%d\t",i,j,i*j);
+        }
+}
+*/
+/*(f) According to a study, the approximate level of intelligence of a
+person can be calculated using the following formula:
+i = 2 + ( y + 0.5 x )
+Write a program that will produce a table of values of i, y and x,
+where y varies from 1 to 6, and, for each value of y, x varies from
+5.5 to 12.5 in steps of 0.5.
+
+int main()
+{
+    float i,x,y;
+    float iq;
+    for(i=1;i<=84;i++)
+    {
+        for(x=5.5;x<=12.5;x=x+0.5)
+        {
+            for(y=1;y<=6;y++)
+            {
+                iq=2+(y+(0.5*x));
+                printf("i=2+(%d+(0.5*%d))=%f\t",y,x,iq);
+            }
+            iq=0;
+        }
+    }
+}*/
+
+/*(g) When interest compounds q times per year at an annual rate of
+r % for n years, the principal p compounds to an amount a as per
+the following formula
+a = p ( 1 + r / q ) nq
+Write a program to read 10 sets of p, r, n & q and calculate the
+corresponding as.
+int main()
+{
+    float i,j,p,r,n,q,nq;
+    double a;
+    for(i=0;i<10;i++)
+    {
+        printf("Enter the values of p,r,n,q");
+        scanf("%f%f%f%f",&p,&r,&n,&q);
+        a=(p*(1+(r/q)));
+        nq=n*q;
+        printf("value of a=%f\n",pow(a,nq));
+    }
+}*/
+/*(i) Write a program to generate all Pythogorean Triplets with side
+length less than or equal to 30.*/
+
+
+/*(j) Population of a town today is 100000. The population has increased
+steadily at the rate of 10 % per year for last 10 years. Write a
+program to determine the population at the end of each year in the
+last decade.
+
+int main()
+{
+    int p=100000,inc=10,no=10,per;
+    per=(p*inc)/100;
+    for(int i=1;i<=no;i++)
+    {
+        p=p+per;
+        printf("Population increase for %d year is : %d\n",i,p);
+    }
+}*/
+
+/*(l) Write a program to print 24 hours of day with suitable suffixes like
+AM, PM, Noon and Midnight.
+
+
+int main()
+{
+    for(float i=1;i<=24;i++)
+    {
+        if(i>0&&i<12)
+        {
+            printf("%0.2f AM\n",i);
+        }
+        else if(i==12)
+        {
+            printf("%0.2f Noon\n",i);
+        }
+        else if(i>12&&i<24)
+        {
+            printf("%0.2f PM\n",i/2);
+        }
+        else if(i==24)
+        {
+            printf("%0.2f Midnight",i/2);
+        }
+    }
+}*/
+
+/*(m) Write a program to produce the following output:
+    1
+   2 3
+  4 5 6
+ 7 8 9 1
+
+ int main()
+ {
+     int i,j,k;
+     k=4;
+     int l=1;
+     for(i=1;i<=4;i++)
+     {
+         for(j=k;j>=0;j--)
+         {
+             printf(" ");
+         }
+         k=k-1;
+         for(j=1;j<=i;j++)
+         {
+             printf("%d ",l);
+             l++;
+         }
+         printf("\n");
+     }
+ }*/
+
+ /*
+ (n) Write a program to produce the following output:
+A B C D E F G F E D C B A
+A B C D E F   F E D C B A
+A B C D E       E D C B A
+A B C D           D C B A
+A B C               C B A
+A B                   B A
+A                       A
+
+
+ int main()
+ {
+     int i,j,k,l;
+     k=5;
+     for(i=1;i<=7;i++)
+     {
+         l=65;
+         for(j=k;j>=0;j--)
+         {
+             printf(" %c",l);
+             l++;
+         }
+         printf(" ");
+         for(j=1;j<=i;j++)
+         {
+             if(i==1)
+             {
+                 printf(" G  ");
+             }
+             else{
+             printf("    ");
+                }
+         }
+         l=l-1;
+         for(j=k;j>=0;j--)
+         {
+             printf("%c ",l);
+             l--;
+         }
+         k=k-1;
+         printf("\n");
+     }
+ }*/
+
+ /*(o) Write a program to produce the following output:
+        1
+       1 1
+      1 2 1
+     1 3 3 1
+    1 4 6 4 1
+
+
+ int main()
+ {
+     int k=5,j;
+     for(int i;i<=5;i++)
+     {
+         for(j=k;j>=0;j--)
+         {
+             printf(" ");
+         }
+         for(j=1;j<=i;j++)
+         {
+             if(i==1||i==2)
+             {
+                 printf("1 ");
+             }
+             else if(i==3)
+             {
+                 if(j==1||j==3)
+                 {
+                     printf("1 ");
+                 }
+                 else
+                    printf("%d ",j);
+             }
+             else if(i==4)
+             {
+                 if(j==1||j==4)
+                 {
+                     printf("1 ");
+                 }
+                 else if(j==2||j==3)
+                         printf("3 ");
+                 else
+                    printf("%d ",j);
+             }
+             else if(i==5)
+             {
+                 if(j==1||j==5)
+                 {
+                     printf("1 ");
+                 }
+                 else if(j==2||j==4)
+                         printf("4 ");
+                 else
+                    printf("6 ");
+             }
+
+         }
+         k--;
+         printf("\n");
+     }
+ }*/
