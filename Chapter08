@@ -1,0 +1,190 @@
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+
+
+//This is Chapter 08 Functions
+/*(a) Write a function to calculate the factorial value of any integer
+entered through the keyboard.
+
+int fact(int x);
+int main()
+{
+    int a,b;
+    printf("Enter the number:");
+    scanf("%d",&b);
+    a=fact(b);
+    printf("%d",a);
+}
+int fact(int x)
+{
+    int n;
+    n=1;
+    for(int i=1;i++<x;)
+        n=n*i;
+    return n;
+
+}*/
+
+/*(b) Write a function power ( a, b ), to calculate the value of a raised to
+b.
+
+
+int power(int,int);
+int main()
+{
+    int a,b;
+    printf("Enter the input:");
+    scanf("%d%d",&a,&b);
+    power(a,b);
+}
+int power(int x,int y)
+{
+    int c,power=x;
+    c=1;
+    while(c<y)
+    {
+        power=power*power;
+        c=c+1;
+    }
+    printf("%d",power);
+}*/
+
+/*(c) Write a general-purpose function to convert any given year into its
+Roman equivalent. Use these Roman equivalents for decimal
+numbers: 1 – I, 5 – I, 10 – X, 50 – L, 100 – C, 500 – D, 1000 – M.
+Example:
+Roman equivalent of 1988 is mdcccclxxxviii.
+Roman equivalent of 1525 is mdxxv.
+
+
+int roman(int );
+int main()
+{
+    int a;
+    printf("Enter the year:");
+    scanf("%d",&a);
+    roman(a);
+}
+int roman(int x)
+{
+    while(x)
+    {
+    if(x>=1000)
+    {
+        printf("M");
+        x-=1000;
+    }
+    else if(x>=500)
+    {
+        printf("D");
+        x-=500;
+    }
+    else if(x>=100)
+    {
+        printf("C");
+        x-=100;
+    }
+    else if(x>=50)
+    {
+        printf("L");
+        x-=50;
+    }
+    else if(x>=10)
+    {
+        printf("X");
+        x-=10;
+    }
+    else if(x>=5)
+    {
+        printf("V");
+        x-=5;
+    }
+    else if(x>=1)
+    {
+        printf("I");
+        x-=1;
+    }
+    }
+}*/
+
+/*(d) Any year is entered through the keyboard. Write a function to
+determine whether the year is a leap year or not.
+
+
+int leapyear(int);
+int main()
+{
+    int a;
+    printf("Enter the year");
+    scanf("%d",&a);
+
+    leapyear(a);
+    leapyear(2000);
+}
+
+int leapyear(int x)
+{
+    if (x%4==0||x%400==0)
+    {
+        printf("This is Leapyear");
+    }
+    else if(x%100==0)
+    {
+        printf("This year is not a year year");
+    }
+    else
+    {
+        printf("This year is not a year year");
+    }
+}*/
+
+
+/*(e) A positive integer is entered through the keyboard. Write a function
+to obtain the prime factors of this number.
+For example, prime factors of 24 are 2, 2, 2 and 3, whereas prime
+factors of 35 are 5 and 7.
+
+int factor(int a);
+int main()
+{
+    int a;
+    printf("Enter the number:");
+    scanf("%d",&a);
+    factor(a);
+}
+int factor( int a)
+{
+    int flag=1;
+    if (a==1)
+        printf("The number %d is neither prime nor composite.\n",a);
+    for(int i=2;i<=a/2;i++)
+    {
+        if(a%i==0)
+        {
+            flag=0;
+            break;
+        }
+    }
+    if(flag==1)
+    {
+        printf("The prime Factors of %d is 1,%d\n",a,a);
+    }
+    else if(flag==0)
+    {
+        int i=2,num;
+        num=a;
+        while(i!=1)
+        {
+            if(num%i==0)
+            {
+                printf("%d is prime factor\t",i);
+            }
+            else{
+                i++;
+                continue;
+            }
+            num=num/i;
+        }
+    }
+}*/
