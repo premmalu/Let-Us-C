@@ -1,0 +1,176 @@
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+
+
+//This is Chapter 09 Pointers
+
+
+/*(a) Write a function that receives 5 integers and returns the sum,
+average and standard deviation of these numbers. Call this function
+from main( ) and print the results in main( ).
+
+int marks(int,int,int,int,int);
+int main()
+{
+    int a,b,c,d,e;
+    printf("Enter the Marks of five subjects :");
+    scanf("%d%d%d%d%d",&a,&b,&c,&d,&e);
+    marks(a,b,c,d,e);
+}
+int marks(int a,int b, int c ,int d, int e)
+{
+    int sum,avg,sd;
+    sum=(a+b+c+d+e);
+    avg=(sum/5);
+    printf("sum:%d\t",sum);
+    printf("Avg:%d\t",avg);
+}
+*/
+
+
+/*(b) Write a function that receives marks received by a student in 3
+subjects and returns the average and percentage of these marks.
+Call this function from main( ) and print the results in main( ).
+
+
+int marks(int,int,int);
+int main()
+{
+    int a,b,c,d,e;
+    printf("Enter the Marks of Three subjects :");
+    scanf("%d%d%d",&a,&b,&c);
+    marks(a,b,c);
+}
+int marks(int a,int b, int c )
+{
+    int sum,avg;
+    sum=(a+b+c);
+    avg=(sum/3);
+    printf("sum:%d\t",sum);
+    printf("Avg:%d\t",avg);
+}*/
+
+/*(d) Given three variables x, y, z write a function to circularly shift their
+values to right. In other words if x = 5, y = 8, z = 10, after circular
+shift y = 5, z = 8, x =10. Call the function with variables a, b, c to
+circularly shift values
+
+int rightswap(int *a ,int *b,int *c);
+int main()
+{
+    int a,b,c;
+    printf("Enter any Three Numbers: ");
+    scanf("%d%d%d",&a,&b,&c);
+    rightswap(&a,&b,&c);
+    printf("a:%d\t,b:%d\t,c:%d\t",a,b,c);
+}
+int rightswap(int *a,int *b,int *c)
+{
+    int temp;
+    temp=*a;
+    *a=*c;
+    *c=*b;
+    *b=temp;
+}*/
+
+/*(e) If the lengths of the sides of a triangle are denoted by a, b, and c,
+then area of triangle is given by
+
+area  S(S  a)(S  b)(S  c)
+where, S = ( a + b + c ) / 2. Write a function to calculate the area of
+the triangle
+
+int area(int,int,int);
+int main()
+{
+    int a,b,c;
+    printf("Enter the sides of triangle");
+    scanf("%d%d%d",&a,&b,&c);
+
+    area(a,b,c);
+}
+int area(int a,int b,int c)
+{
+    float S,area,areasqrt;
+    S = (a+b+c)/2;
+    area=(S*(S-a)*(S-b)*(S-c));
+    areasqrt=sqrt(area);
+    printf("Area of Triangle is :%f",areasqrt);
+}*/
+
+/*(f) Write a function to compute the distance between two points and
+use it to develop another function that will compute the area of the
+triangle whose vertices are A(x1, y1), B(x2, y2), and C(x3, y3). Use
+these functions to develop a function which returns a value 1 if the
+point (x, y) lines inside the triangle ABC, otherwise returns a value
+0.
+
+
+float dis(int, int, int, int);
+float ar(int, int, int, int, int, int);
+int main()
+{
+	int x1, x2, x3, y1, y2, y3, x, y;
+	float A1, A2, A3, A;
+	printf("Enter the cordinates of first point of the trianlge : ");
+	scanf("%d%d", &x1, &y1);
+	printf("\n\nEnter the cordinates of second point of the trianlge : ");
+	scanf("%d%d", &x2, &y2);
+	printf("\n\nEnter the cordinates of third point of the trianlge : ");
+	scanf("%d%d", &x3, &y3);
+	printf("\n\nEnter the points to check it's position : ");
+	scanf("%d%d", &x, &y);
+	A1 = ar(x1, y1, x2, y2, x, y);
+	printf("A1 : %f\n", A1);
+	A2 = ar(x1, y1, x3, y3, x, y);
+	printf("A2 : %f\n", A2);
+	A3 = ar(x, y, x2, y2, x3, y3);
+	printf("A3 : %f\n", A3);
+	A = ar(x1, y1, x2, y2, x3, y3);
+	printf("A : %f\n", A);
+	if (!(A1 + A2 + A3>A || A1 + A2 + A3<A))
+		printf("\n\nThe point (%d,%d) lies inside of triangle.", x, y);
+	else
+		printf("\n\nThe point (%d,%d) lies outside of triangle.", x, y);
+	getch();
+	return 0;
+}
+
+float dis(int x1, int y1, int x2, int y2)
+{
+	float distance;
+	distance = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
+	return (distance);
+}
+
+float ar(int x1, int y1, int x2, int y2, int x3, int y3)
+{
+	float a, b, c, area, S;
+	a = dis(x1, y1, x2, y2);
+	b = dis(x1, y1, x3, y3);
+	c = dis(x2, y2, x3, y3);
+	S = (a + b + c) / 2;
+	area = sqrt(S*(S - a)*(S - b)*(S - c));
+	return (area);
+}
+*/
+/*
+int main()
+{
+    int num=25;
+    int s1=0,s2=1,s3;
+    printf("0,1");
+    if(s3<num)
+    {
+        for (int i=1;i<num;i++)
+        {
+            s3=s1+s2;
+            s1=s2;
+            s2=s3;
+            printf(",%d",s3);
+        }
+    }
+}
+*/
+
